@@ -1,0 +1,966 @@
+{
+  "addons": [
+    {
+      "id": 8,
+      "created_at": "2022-11-05 19:15:33+0000",
+      "updated_at": "2022-11-05 19:15:33+0000",
+      "deleted_at": null,
+      "name": "oracle",
+      "description": "",
+      "guid": "vwDlz2KM5Np-tuiP8sszrepVvnw",
+      "workspace": { "id": 2 },
+      "branch": { "id": 0 },
+      "input": [
+        {
+          "name": "oracles_id",
+          "type": "int",
+          "description": "",
+          "nullable": false,
+          "default": "",
+          "merge": false,
+          "hidden": [],
+          "override": [],
+          "customize": {},
+          "required": false,
+          "values": [],
+          "access": "public",
+          "children": [],
+          "list": { "min": "", "max": "" },
+          "style": { "type": "single" },
+          "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+          "market_item": { "id": 0, "version": 0, "guid": "" }
+        }
+      ],
+      "context": {
+        "dbo": { "id": 24, "as": "oracles" },
+        "bind": [],
+        "search": {
+          "expression": [
+            {
+              "type": "statement",
+              "or": false,
+              "group": { "expression": [] },
+              "statement": {
+                "op": "=",
+                "left": {
+                  "operand": "oracles.id",
+                  "tag": "col",
+                  "filters": []
+                },
+                "right": {
+                  "operand": "oracles_id",
+                  "tag": "input",
+                  "ignore_empty": false,
+                  "filters": []
+                }
+              }
+            }
+          ]
+        },
+        "external": {
+          "value": "",
+          "tag": "input",
+          "filters": [],
+          "permissions": {
+            "search": true,
+            "sort": true,
+            "per_page": false,
+            "page": true
+          }
+        },
+        "eval": [],
+        "sort": [],
+        "return": {
+          "type": "single",
+          "single": { "sort": [] },
+          "list": {
+            "distinct": "auto",
+            "sort": [],
+            "paging": {
+              "enabled": false,
+              "page": 1,
+              "offset": 0,
+              "per_page": 25,
+              "metadata": true,
+              "totals": false
+            }
+          },
+          "stream": {
+            "distinct": "auto",
+            "sort": [],
+            "paging": { "enabled": false, "page": 1, "per_page": 25 }
+          },
+          "aggregate": {
+            "group": [],
+            "sort": [],
+            "index": [],
+            "eval": [],
+            "paging": {
+              "enabled": false,
+              "page": 1,
+              "per_page": 25,
+              "metadata": true
+            }
+          }
+        }
+      },
+      "output": { "customize": false, "items": [] },
+      "market_item": { "id": 0, "version": 0, "guid": "" },
+      "@io": {
+        "input": {
+          "oracles_id?=\u0022\u0022": "tableref|@(\u0022dbo=24\u0022)"
+        },
+        "input2": [
+          {
+            "name": "oracles_id",
+            "type": "int",
+            "description": "",
+            "nullable": false,
+            "default": "",
+            "merge": false,
+            "hidden": [],
+            "override": [],
+            "customize": {},
+            "required": false,
+            "values": [],
+            "access": "public",
+            "children": [],
+            "list": { "min": "", "max": "" },
+            "style": { "type": "single" },
+            "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+            "market_item": { "id": 0, "version": 0, "guid": "" }
+          }
+        ],
+        "output": {
+          "?__self": {
+            "id": "int|@(\u0022dbo=24\u0022)",
+            "created_at?=\u0022now\u0022": "epochms|@(\u0022access=private\u0022)",
+            "name?=\u0022\u0022": "text|trim",
+            "chainId": "text|trim",
+            "contractAddress": "text|trim",
+            "accounts_id?=\u00220\u0022": "tableref|@(\u0022dbo=22\u0022)",
+            "webhookUrl": "text|trim",
+            "eoas_id?=\u00220\u0022": "tableref|@(\u0022dbo=25\u0022)",
+            "confirmed?=\u0022false\u0022": "bool",
+            "async?=\u0022false\u0022": "bool",
+            "?jobId?=null": "text|trim",
+            "inputs?=\u0022\u0022": "json",
+            "outputType?=\u0022\u0022": "text|trim"
+          }
+        },
+        "output2": [
+          {
+            "name": "__self",
+            "nullable": true,
+            "required": true,
+            "default": null,
+            "style": { "type": "single", "min": null, "max": null },
+            "op": "=",
+            "methods": [],
+            "children": [
+              {
+                "name": "id",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+                "children": [],
+                "type": "int"
+              },
+              {
+                "name": "created_at",
+                "nullable": false,
+                "required": false,
+                "default": "now",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["access=private"] }],
+                "children": [],
+                "type": "epochms"
+              },
+              {
+                "name": "name",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "chainId",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "contractAddress",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "accounts_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=22"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "webhookUrl",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "eoas_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=25"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "confirmed",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "async",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "jobId",
+                "nullable": true,
+                "required": false,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "inputs",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "json"
+              },
+              {
+                "name": "outputType",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              }
+            ],
+            "type": "obj"
+          }
+        ],
+        "output_original": {
+          "?__self": {
+            "id": "int|@(\u0022dbo=24\u0022)",
+            "created_at?=\u0022now\u0022": "epochms|@(\u0022access=private\u0022)",
+            "name?=\u0022\u0022": "text|trim",
+            "chainId": "text|trim",
+            "contractAddress": "text|trim",
+            "accounts_id?=\u00220\u0022": "tableref|@(\u0022dbo=22\u0022)",
+            "webhookUrl": "text|trim",
+            "eoas_id?=\u00220\u0022": "tableref|@(\u0022dbo=25\u0022)",
+            "confirmed?=\u0022false\u0022": "bool",
+            "async?=\u0022false\u0022": "bool",
+            "?jobId?=null": "text|trim",
+            "inputs?=\u0022\u0022": "json",
+            "outputType?=\u0022\u0022": "text|trim"
+          }
+        },
+        "output2_original": [
+          {
+            "name": "__self",
+            "nullable": true,
+            "required": true,
+            "default": null,
+            "style": { "type": "single", "min": null, "max": null },
+            "op": "=",
+            "methods": [],
+            "children": [
+              {
+                "name": "id",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+                "children": [],
+                "type": "int"
+              },
+              {
+                "name": "created_at",
+                "nullable": false,
+                "required": false,
+                "default": "now",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["access=private"] }],
+                "children": [],
+                "type": "epochms"
+              },
+              {
+                "name": "name",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "chainId",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "contractAddress",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "accounts_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=22"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "webhookUrl",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "eoas_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=25"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "confirmed",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "async",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "jobId",
+                "nullable": true,
+                "required": false,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "inputs",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "json"
+              },
+              {
+                "name": "outputType",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              }
+            ],
+            "type": "obj"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "created_at": "2022-11-05 19:16:54+0000",
+      "updated_at": "2022-11-05 19:16:54+0000",
+      "deleted_at": null,
+      "name": "oracle",
+      "description": "",
+      "guid": "9pxd3AEmxxEYz_7Sn4VSlhYmCdo",
+      "workspace": { "id": 2 },
+      "branch": { "id": 0 },
+      "input": [
+        {
+          "name": "oracles_id",
+          "type": "int",
+          "description": "",
+          "nullable": false,
+          "default": "",
+          "merge": false,
+          "hidden": [],
+          "override": [],
+          "customize": {},
+          "required": false,
+          "values": [],
+          "access": "public",
+          "children": [],
+          "list": { "min": "", "max": "" },
+          "style": { "type": "single" },
+          "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+          "market_item": { "id": 0, "version": 0, "guid": "" }
+        }
+      ],
+      "context": {
+        "dbo": { "id": 24, "as": "oracles" },
+        "bind": [],
+        "search": {
+          "expression": [
+            {
+              "type": "statement",
+              "or": false,
+              "group": { "expression": [] },
+              "statement": {
+                "op": "=",
+                "left": {
+                  "operand": "oracles.id",
+                  "tag": "col",
+                  "filters": []
+                },
+                "right": {
+                  "operand": "oracles_id",
+                  "tag": "input",
+                  "ignore_empty": false,
+                  "filters": []
+                }
+              }
+            }
+          ]
+        },
+        "external": {
+          "value": "",
+          "tag": "input",
+          "filters": [],
+          "permissions": {
+            "search": true,
+            "sort": true,
+            "per_page": false,
+            "page": true
+          }
+        },
+        "eval": [],
+        "sort": [],
+        "return": {
+          "type": "single",
+          "single": { "sort": [] },
+          "list": {
+            "distinct": "auto",
+            "sort": [],
+            "paging": {
+              "enabled": false,
+              "page": 1,
+              "offset": 0,
+              "per_page": 25,
+              "metadata": true,
+              "totals": false
+            }
+          },
+          "stream": {
+            "distinct": "auto",
+            "sort": [],
+            "paging": { "enabled": false, "page": 1, "per_page": 25 }
+          },
+          "aggregate": {
+            "group": [],
+            "sort": [],
+            "index": [],
+            "eval": [],
+            "paging": {
+              "enabled": false,
+              "page": 1,
+              "per_page": 25,
+              "metadata": true
+            }
+          }
+        }
+      },
+      "output": { "customize": false, "items": [] },
+      "market_item": { "id": 0, "version": 0, "guid": "" },
+      "@io": {
+        "input": {
+          "oracles_id?=\u0022\u0022": "tableref|@(\u0022dbo=24\u0022)"
+        },
+        "input2": [
+          {
+            "name": "oracles_id",
+            "type": "int",
+            "description": "",
+            "nullable": false,
+            "default": "",
+            "merge": false,
+            "hidden": [],
+            "override": [],
+            "customize": {},
+            "required": false,
+            "values": [],
+            "access": "public",
+            "children": [],
+            "list": { "min": "", "max": "" },
+            "style": { "type": "single" },
+            "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+            "market_item": { "id": 0, "version": 0, "guid": "" }
+          }
+        ],
+        "output": {
+          "?__self": {
+            "id": "int|@(\u0022dbo=24\u0022)",
+            "created_at?=\u0022now\u0022": "epochms|@(\u0022access=private\u0022)",
+            "name?=\u0022\u0022": "text|trim",
+            "chainId": "text|trim",
+            "contractAddress": "text|trim",
+            "accounts_id?=\u00220\u0022": "tableref|@(\u0022dbo=22\u0022)",
+            "webhookUrl": "text|trim",
+            "eoas_id?=\u00220\u0022": "tableref|@(\u0022dbo=25\u0022)",
+            "confirmed?=\u0022false\u0022": "bool",
+            "async?=\u0022false\u0022": "bool",
+            "?jobId?=null": "text|trim",
+            "inputs?=\u0022\u0022": "json",
+            "outputType?=\u0022\u0022": "text|trim"
+          }
+        },
+        "output2": [
+          {
+            "name": "__self",
+            "nullable": true,
+            "required": true,
+            "default": null,
+            "style": { "type": "single", "min": null, "max": null },
+            "op": "=",
+            "methods": [],
+            "children": [
+              {
+                "name": "id",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+                "children": [],
+                "type": "int"
+              },
+              {
+                "name": "created_at",
+                "nullable": false,
+                "required": false,
+                "default": "now",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["access=private"] }],
+                "children": [],
+                "type": "epochms"
+              },
+              {
+                "name": "name",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "chainId",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "contractAddress",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "accounts_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=22"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "webhookUrl",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "eoas_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=25"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "confirmed",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "async",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "jobId",
+                "nullable": true,
+                "required": false,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "inputs",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "json"
+              },
+              {
+                "name": "outputType",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              }
+            ],
+            "type": "obj"
+          }
+        ],
+        "output_original": {
+          "?__self": {
+            "id": "int|@(\u0022dbo=24\u0022)",
+            "created_at?=\u0022now\u0022": "epochms|@(\u0022access=private\u0022)",
+            "name?=\u0022\u0022": "text|trim",
+            "chainId": "text|trim",
+            "contractAddress": "text|trim",
+            "accounts_id?=\u00220\u0022": "tableref|@(\u0022dbo=22\u0022)",
+            "webhookUrl": "text|trim",
+            "eoas_id?=\u00220\u0022": "tableref|@(\u0022dbo=25\u0022)",
+            "confirmed?=\u0022false\u0022": "bool",
+            "async?=\u0022false\u0022": "bool",
+            "?jobId?=null": "text|trim",
+            "inputs?=\u0022\u0022": "json",
+            "outputType?=\u0022\u0022": "text|trim"
+          }
+        },
+        "output2_original": [
+          {
+            "name": "__self",
+            "nullable": true,
+            "required": true,
+            "default": null,
+            "style": { "type": "single", "min": null, "max": null },
+            "op": "=",
+            "methods": [],
+            "children": [
+              {
+                "name": "id",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=24"] }],
+                "children": [],
+                "type": "int"
+              },
+              {
+                "name": "created_at",
+                "nullable": false,
+                "required": false,
+                "default": "now",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["access=private"] }],
+                "children": [],
+                "type": "epochms"
+              },
+              {
+                "name": "name",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "chainId",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "contractAddress",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "accounts_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=22"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "webhookUrl",
+                "nullable": false,
+                "required": true,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "eoas_id",
+                "nullable": false,
+                "required": false,
+                "default": "0",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "@", "arg": ["dbo=25"] }],
+                "children": [],
+                "type": "tableref"
+              },
+              {
+                "name": "confirmed",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "async",
+                "nullable": false,
+                "required": false,
+                "default": "false",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "bool"
+              },
+              {
+                "name": "jobId",
+                "nullable": true,
+                "required": false,
+                "default": null,
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              },
+              {
+                "name": "inputs",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [],
+                "children": [],
+                "type": "json"
+              },
+              {
+                "name": "outputType",
+                "nullable": false,
+                "required": false,
+                "default": "",
+                "style": { "type": "single", "min": null, "max": null },
+                "op": "=",
+                "methods": [{ "name": "trim", "arg": [] }],
+                "children": [],
+                "type": "text"
+              }
+            ],
+            "type": "obj"
+          }
+        ]
+      }
+    }
+  ]
+}
